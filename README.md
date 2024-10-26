@@ -5,6 +5,8 @@ le site fait appelle à un fichier json (sample.json) qui chargé dans le body
 il est chargé par un js coté client 
 <img width="1345" alt="Screenshot 2024-10-26 at 21 42 02" src="https://github.com/user-attachments/assets/af7f2f46-372d-45c6-b383-af161e7957d0">
 
+voici la page qui m'a aider a comprendre ou était la vuln 
+<img width="1408" alt="Screenshot 2024-10-26 at 21 47 39" src="https://github.com/user-attachments/assets/8bc15cfc-7d6f-4d72-be18-a365cda0f2a3">
 
 si l'on intercepte dans burp on peut voir la première requête du site web
 <img width="567" alt="Screenshot 2024-10-26 at 21 35 56" src="https://github.com/user-attachments/assets/8e389bdc-a8ad-46e5-9b29-d701e320951a">
@@ -14,9 +16,6 @@ Une fois que la requête est passé le js est éxecuté et récupère le fichier
 
 si l'on modifie la réponse de la deuxième requête comme ceci:
 <img width="846" alt="Screenshot 2024-10-26 at 21 37 25" src="https://github.com/user-attachments/assets/6a3db042-fc08-4be8-bbac-8000660407ed">
-
-voici la page qui m'a aider a comprendre ou était la vuln 
-<img width="1408" alt="Screenshot 2024-10-26 at 21 47 39" src="https://github.com/user-attachments/assets/8bc15cfc-7d6f-4d72-be18-a365cda0f2a3">
 
 On peut balancer notre payload et forward la requête 
 <img width="1021" alt="Screenshot 2024-10-26 at 21 38 02" src="https://github.com/user-attachments/assets/cd30fa91-f6c9-403c-8a4d-5e07a0fb0301">
